@@ -2,7 +2,7 @@ package mk.ukim.finki.emt.eshop.web.controller;
 
 import mk.ukim.finki.emt.eshop.model.exceptions.InvalidArgumentsException;
 import mk.ukim.finki.emt.eshop.service.AuthService;
-import mk.ukim.finki.emt.eshop.model.Role;
+import mk.ukim.finki.emt.eshop.model.enumerations.Role;
 import mk.ukim.finki.emt.eshop.model.exceptions.PasswordsDoNotMatchException;
 import mk.ukim.finki.emt.eshop.service.UserService;
 import org.springframework.stereotype.Controller;

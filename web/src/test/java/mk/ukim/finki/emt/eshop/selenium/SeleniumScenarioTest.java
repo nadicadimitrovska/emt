@@ -3,7 +3,7 @@ package mk.ukim.finki.emt.eshop.selenium;
 
 import mk.ukim.finki.emt.eshop.model.Category;
 import mk.ukim.finki.emt.eshop.model.Manufacturer;
-import mk.ukim.finki.emt.eshop.model.Role;
+import mk.ukim.finki.emt.eshop.model.enumerations.Role;
 import mk.ukim.finki.emt.eshop.model.User;
 import mk.ukim.finki.emt.eshop.service.CategoryService;
 import mk.ukim.finki.emt.eshop.service.ManufacturerService;

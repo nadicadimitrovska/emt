@@ -1,6 +1,6 @@
 package mk.ukim.finki.emt.eshop.service.impl;
 
-import mk.ukim.finki.emt.eshop.model.Role;
+import mk.ukim.finki.emt.eshop.model.enumerations.Role;
 import mk.ukim.finki.emt.eshop.model.User;
 import mk.ukim.finki.emt.eshop.model.exceptions.InvalidUsernameOrPasswordException;
 import mk.ukim.finki.emt.eshop.model.exceptions.PasswordsDoNotMatchException;
