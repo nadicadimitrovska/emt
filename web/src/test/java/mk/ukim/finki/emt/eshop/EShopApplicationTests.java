@@ -5,7 +5,7 @@ import mk.ukim.finki.emt.eshop.model.Product;
 import mk.ukim.finki.emt.eshop.service.ManufacturerService;
 import mk.ukim.finki.emt.eshop.service.ProductService;
 import mk.ukim.finki.emt.eshop.model.Category;
-import mk.ukim.finki.emt.eshop.model.Role;
+import mk.ukim.finki.emt.eshop.model.enumerations.Role;
 import mk.ukim.finki.emt.eshop.service.CategoryService;
 import mk.ukim.finki.emt.eshop.service.UserService;
 import org.junit.jupiter.api.BeforeEach;

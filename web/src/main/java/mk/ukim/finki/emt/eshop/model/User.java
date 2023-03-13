@@ -1,6 +1,7 @@
 package mk.ukim.finki.emt.eshop.model;
 
 import lombok.Data;
+import mk.ukim.finki.emt.eshop.model.enumerations.Role;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -31,8 +32,10 @@ public class User implements UserDetails {
     @Enumerated(value = EnumType.STRING)
     private Role role;
 
+    @ManyToOne
+    private Discount discount;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user")
     private List<ShoppingCart> carts;
 
     public User() {

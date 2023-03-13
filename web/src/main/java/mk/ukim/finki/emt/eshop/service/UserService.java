@@ -1,6 +1,6 @@
 package mk.ukim.finki.emt.eshop.service;
 
-import mk.ukim.finki.emt.eshop.model.Role;
+import mk.ukim.finki.emt.eshop.model.enumerations.Role;
 import mk.ukim.finki.emt.eshop.model.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
