@@ -2,6 +2,7 @@ package mk.ukim.finki.emt.eshop.repository;
 
 import mk.ukim.finki.emt.eshop.model.User;
 import mk.ukim.finki.emt.eshop.model.enumerations.Role;
+import mk.ukim.finki.emt.eshop.model.exceptions.UserNotFoundException;
 import mk.ukim.finki.emt.eshop.model.projections.UserProjection;
 import org.junit.Assert;
 import org.junit.Test;
@@ -43,5 +44,17 @@ public class UserRepositoryTest {
         Assert.assertEquals("nadica.dimitrovska",userProjection.getUsername());
         Assert.assertEquals("Nadica",userProjection.getName());
         Assert.assertEquals("Dimitrovska",userProjection.getSurname());
+    }
+
+    @Test
+    public void testOptimisticLock(){
+        User user1=this.userRepository.findByUsername("nadica.dimitrovska").orElseThrow(()->new UserNotFoundException("nadica.dimitrovska"));
+        User user2=this.userRepository.findByUsername("nadica.dimitrovska").orElseThrow(()->new UserNotFoundException("nadica.dimitrovska"));
+
+        user1.setName("nadica1");
+        user2.setName("nadica2");
+
+        this.userRepository.save(user1);
+        this.userRepository.save(user2);
     }
 }
