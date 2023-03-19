@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -14,13 +15,22 @@ public class Discount {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate dateCreated;
+    private LocalDateTime dateCreated;
 
-    private LocalDate validUntil;
+    private LocalDateTime validUntil;
 
-    @OneToMany(mappedBy = "discount")
-    private List<User> user;
+//    @OneToMany(mappedBy = "discount")
+//    private List<User> user;
+
+    @ManyToMany
+    private List<User> users;
 
     public Discount() {
+    }
+
+    public Discount(LocalDateTime validUntil) {
+        this.dateCreated = LocalDateTime.now();
+        this.validUntil = validUntil;
+        this.users = users;
     }
 }

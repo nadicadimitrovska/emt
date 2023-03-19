@@ -35,8 +35,8 @@ public class User implements UserDetails {
     @Enumerated(value = EnumType.STRING)
     private Role role;
 
-    @ManyToOne
-    private Discount discount;
+//    @ManyToOne
+//    private Discount discount;
 
     @OneToMany(mappedBy = "user")
     private List<ShoppingCart> carts;
